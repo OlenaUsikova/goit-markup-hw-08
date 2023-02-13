@@ -1,0 +1,43 @@
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients__list {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.clients__item {
+    width: 170px;
+    height: 92px;
+}
+.client__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    outline: transparent;
+    fill: var(--anim-icon);
+    transition: var(--anim-icon);
+    &:hover,
+   &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+
+.clients__icon {
+    fill: var(--social-icon-color);
+    text-align: center;
+    transition: var(--anim-icon);
+}
+
+.client__link:hover .clients__icon,
+.client__link:focus .clients__icon {
+    fill: var(--accent-color);
+}

@@ -1,0 +1,153 @@
+.footer {
+    margin: 0 auto;
+ font-style: normal;
+ background-color: var(--footer-color);
+ padding-top: 62px;
+ padding-bottom: 66px;
+}
+
+.footer-left {
+    display: block;
+    margin-right: 70px;
+   }
+ .footer__address {
+    width: 231px;
+    margin-top: 20px;
+   }
+.footer__link {
+ color: var(--background-color);
+ font-weight: 400;
+ line-height: 1.7;
+ transition: color var(--anim-icon);
+ &:hover,
+ &:focus {
+  color: var(--accent-color);
+ }
+}
+
+.light-text {
+ color: rgba(255, 255, 255, 0.6);
+ margin-top: 8px;
+ display: inline-block;
+}
+
+
+.footer .container {
+ display: flex;
+  align-items: baseline;
+}
+
+
+.footer-right {
+ display: flex;
+ width: 206px;
+}
+
+.footer__social {
+ margin-top: 12px;
+}
+
+.footer__block {
+ display: flex;
+ width: 206px;
+ justify-content: center;
+ gap: 10px;
+ margin-top: 20px;
+}
+
+.join-in {
+ font-weight: 700;
+ font-size: 14px;
+ line-height: 1.2;
+ letter-spacing: 0.03em;
+ text-transform: uppercase;
+ color: var(--background-color);
+ margin-top: 0px;
+}
+
+.icon-link-footer {
+ width: 44px;
+ height: 44px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: rgba(255, 255, 255, 0.1);
+ margin: 0;
+ transition: var(--anim-icon);
+}
+
+.icon-link-footer:hover,
+.icon-link-footer:focus {
+ background-color: var(--accent-color);
+
+}
+
+.social-icons-footer {
+ width: 20px;
+ height: 20px;
+ fill: var(--background-color);
+ transition: fill var(--anim-icon);
+}
+
+/* форма відправки */
+.subscription {
+ display: block;
+ width: 570px;
+ height: 86px;
+ margin-left: 93px;
+ margin-top: 12px;
+}
+
+.join-in {
+ width: 207px;
+ margin-bottom: 20px;
+}
+
+.subscription-form {
+ display: flex;
+}
+
+.subscription-input {
+ width: 358px;
+ height: 50px;
+ margin-right: 12px;
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+ border-radius: 4px;
+ color: var(--background-color);
+ background-color: var(--footer-color);
+ padding-left: 15px;
+}
+
+.subscription-btn {
+ display: flex;
+ width: 200px;
+ height: 50px;
+ background-color: var(--accent-color);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+ border-radius: 4px;
+ align-items: center;
+ text-align: center;
+ font-size: 16px;
+ line-height: calc(30 / 16);
+ letter-spacing: 0.06em;
+ color: var(--background-color);
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-left: 28px;
+ border-color: transparent;
+ transition: background-color var(--anim-icon);
+}
+
+.subscription-btn:hover,
+.subscription-btn:focus {
+ background-color: var(--aktiv-color);
+ border-color: 1px solid var(--aktiv-color);
+}
+
+.subscription-icon {
+ fill: var(--background-color);
+ margin: 13px 18px 13px 10px;
+ padding: 0;
+}
