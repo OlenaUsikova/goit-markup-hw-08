@@ -511,14 +511,13 @@ button {
 .nav__links {
   font-weight: 500;
   line-height: 1, 2;
+  letter-spacing: 0.02em;
   color: var(--title-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
   display: block;
-  font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -1498,5 +1497,28 @@ button {
   transition: var(--anim-icon);
 }
 .mobal-link:last-child:hover, .mobal-link:last-child:focus {
+  color: var(--accent-color);
+}
+
+.nav-modal__links {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  line-height: 1, 17;
+  color: var(--title-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  -webkit-transition: color var(--anim-icon);
+  transition: color var(--anim-icon);
+}
+.nav-modal__links:hover, .nav-modal__links:focus {
+  color: var(--accent-color);
+}
+
+.nav-modal__links.current {
   color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
