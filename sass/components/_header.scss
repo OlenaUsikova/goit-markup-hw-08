@@ -7,14 +7,18 @@
  justify-content: space-between;
  align-items: center;
 }}
+.header__wrapper {
+   position: relative;
+}
 
 .nav {
  display: flex;
  justify-content: space-between;
  align-items: center;
  display: none;
- @media  and (min-width: 767.98px)  { displey:block   
- };
+ @media screen and (min-width: 767.98px) {
+   displey:block
+};
 }
 
 .nav__logo {
@@ -55,8 +59,10 @@
 .nav__adress {
 //  display: flex;
  display: none;
- @media  and (min-width: 767.98px)  { displey:block   
- };
+ 
+ @media screen and (min-width: 767.98px) {
+   displey:block
+};
 }
 
 .nav__notitia:not(:first-child) {

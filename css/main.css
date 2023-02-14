@@ -474,6 +474,10 @@ button {
           align-items: center;
 }
 
+.header__wrapper {
+  position: relative;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,7 +488,14 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
+@media screen and (min-width: 767.98px) {
+  .nav {
+    displey: block;
+  }
+}
+
 .nav__logo {
   padding: 24px 0;
 }
@@ -524,9 +535,12 @@ button {
 }
 
 .nav__adress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 767.98px) {
+  .nav__adress {
+    displey: block;
+  }
 }
 
 .nav__notitia:not(:first-child) {
@@ -1408,6 +1422,15 @@ button {
   padding: 10px 52px;
   margin-top: 40px;
   margin-left: 124px;
+}
+
+.header__btn-menu {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 6px;
+  right: 6px;
+  background-color: var(--background-color);
 }
 
 .modal-menu__btn {
