@@ -285,6 +285,12 @@ img {
   height: auto;
 }
 
+input,
+textarea {
+  width: 100%;
+  display: block;
+}
+
 address {
   font-style: normal;
   color: var(--background-color);
@@ -340,15 +346,25 @@ button {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
 }
@@ -399,6 +415,8 @@ button {
           justify-content: center;
   gap: 10px;
   margin: 16px 32px 0px 32px;
+  text-align: center;
+  margin: 20px auto;
 }
 
 .icon-link {
@@ -424,6 +442,7 @@ button {
   fill: var(--social-icon-color);
   -webkit-transition: fill var(--anim-icon);
   transition: fill var(--anim-icon);
+  text-align: center;
 }
 
 .icon-link:hover,
@@ -466,7 +485,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .nav__logo {
   padding: 24px 0;
 }
@@ -559,17 +577,50 @@ button {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 1600px;
+  max-width: 480px;
   margin: 0 auto;
   background-color: var(--footer-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/webstudio.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/webstudio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_mob@1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_mob@1x.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_mob@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_mob@2x.jpg);
+  }
+}
+@media screen and (min-width: 481px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_tab@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_tab@1x.jpg);
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_tab@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_tab@2x.jpg);
+  }
+}
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-Img_desk@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-Img_desk@1x.jpg);
+  }
+}
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-Img_desk@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-Img_desk@2x.jpg);
+  }
 }
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -589,7 +640,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 216px;
+  min-width: 200px;
   height: 50px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -606,27 +657,18 @@ button {
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .advatages__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
 .advantages__list {
-  width: 270px;
-  margin-left: 30px;
-}
-.advantages__list:first-child {
-  margin-left: 0;
+  max-width: 450px;
+  text-align: center;
 }
 
 .advantages__icon {
@@ -650,16 +692,11 @@ button {
 }
 
 .works {
-  padding-bottom: 94px;
+  display: none;
+  padding-bottom: 30px;
 }
 
 .works__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 50px;
   gap: 30px;
 }
@@ -685,23 +722,26 @@ button {
 
 .team {
   background: var(--accent-background-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .team__list {
-  width: 270px;
+  max-width: 450px;
   background-color: var(--background-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -730,20 +770,26 @@ button {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .clients__item {
-  width: 170px;
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
   height: 92px;
 }
 
@@ -792,12 +838,18 @@ button {
 
 .footer-left {
   display: block;
-  margin-right: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 232px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer__address {
   width: 231px;
   margin-top: 20px;
+  text-align: center;
 }
 
 .footer__link {
@@ -817,20 +869,13 @@ button {
   display: inline-block;
 }
 
-.footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
 .footer-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 206px;
+  text-align: center;
+  margin: 60px auto;
 }
 
 .footer__social {
@@ -894,27 +939,33 @@ button {
 /* форма відправки */
 .subscription {
   display: block;
-  width: 570px;
+  max-width: 100%;
   height: 86px;
-  margin-left: 93px;
-  margin-top: 12px;
 }
 
 .join-in {
   width: 207px;
   margin-bottom: 20px;
+  margin: 0 auto;
 }
 
 .subscription-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .subscription-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -922,13 +973,14 @@ button {
   color: var(--background-color);
   background-color: var(--footer-color);
   padding-left: 15px;
+  margin-top: 20px;
 }
 
 .subscription-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 200px;
+  max-width: 200px;
   height: 50px;
   background-color: var(--accent-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -948,6 +1000,8 @@ button {
   border-color: transparent;
   -webkit-transition: background-color var(--anim-icon);
   transition: background-color var(--anim-icon);
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .subscription-btn:hover,
@@ -1107,8 +1161,8 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 689px;
   background-color: var(--background-color);
   padding: 40px;
   -webkit-transition-property: -webkit-transform;
@@ -1354,4 +1408,50 @@ button {
   padding: 10px 52px;
   margin-top: 40px;
   margin-left: 124px;
+}
+
+.modal-menu__btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-menu {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3647058824);
+  padding: 40px;
+  color: #fff;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+.modal-menu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.modal-menu__list {
+  margin-bottom: auto;
+}
+
+.qwe {
+  margin-top: auto;
+}
+
+.modal-menu__link {
+  font-size: 25px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,18 +1,20 @@
 .team {
     background: var(--accent-background-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team__box {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 .team__list {
-    width: 270px;
+    max-width: 450px;
     background-color: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
