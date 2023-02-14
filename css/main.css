@@ -1454,7 +1454,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3647058824);
+  background-color: var(--background-color);
   padding: 40px;
   color: #fff;
   -webkit-transition: -webkit-transform 250ms linear;
@@ -1468,13 +1468,35 @@ button {
 }
 
 .modal-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: auto;
-}
-
-.qwe {
-  margin-top: auto;
 }
 
 .modal-menu__link {
   font-size: 25px;
+}
+
+.mobal-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 0 5px;
+}
+.mobal-link:last-child {
+  border: none;
+  -webkit-transition: var(--anim-icon);
+  transition: var(--anim-icon);
+}
+.mobal-link:last-child:hover, .mobal-link:last-child:focus {
+  color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
