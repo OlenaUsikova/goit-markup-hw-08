@@ -1070,6 +1070,7 @@ button {
 
 .footer-left {
   text-align: center;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-left {
@@ -1121,27 +1122,18 @@ button {
 }
 
 .footer-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 206px;
   text-align: center;
-}
-
-.footer__social {
-  margin-top: 12px;
+  margin-bottom: 60px;
 }
 
 .footer__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 206px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .join-in {
@@ -1152,10 +1144,10 @@ button {
   text-transform: uppercase;
   color: var(--background-color);
   margin-top: 0px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1200px) {
   .join-in {
-    margin-top: 12px;
     text-align: start;
   }
 }
@@ -1204,12 +1196,6 @@ button {
   }
 }
 
-.join-in {
-  max-width: 207px;
-  margin-bottom: 20px;
-  margin: 0 auto;
-}
-
 .subscription-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1223,16 +1209,16 @@ button {
           align-items: center;
   text-align: center;
 }
-@media screen and (min-width: 768px) and (man-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .subscription-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 450px;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1243,9 +1229,17 @@ button {
             flex-direction: row;
   }
 }
+.subscription-form .subscription-label {
+  max-width: 450px;
+  width: 100%;
+}
 @media screen and (min-width: 768px) {
   .subscription-form .subscription-label {
     max-width: 450px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1259,7 +1253,6 @@ button {
   color: var(--background-color);
   background-color: var(--footer-color);
   padding-left: 15px;
-  margin-top: 20px;
 }
 @media screen and (min-width: 768px) {
   .subscription-input {
@@ -1298,6 +1291,11 @@ button {
   -webkit-transition: background-color var(--anim-icon);
   transition: background-color var(--anim-icon);
   margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .subscription-btn {
+    margin: 0;
+  }
 }
 
 .subscription-btn:hover,

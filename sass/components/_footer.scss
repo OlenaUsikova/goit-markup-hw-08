@@ -30,6 +30,7 @@ padding-bottom: 60px;
 
 .footer-left {
        text-align: center;
+       margin-bottom: 60px;
         @media screen and (min-width: 768px) {
        padding-bottom: 0px;
     }
@@ -70,24 +71,20 @@ padding-bottom: 60px;
  color: rgba(255, 255, 255, 0.6);
  margin-top: 8px;
  display: inline-block;
+ 
 }
 
 .footer-right {
- display: flex;
- width: 206px;
- text-align: center;
-}
-
-.footer__social {
- margin-top: 12px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .footer__block {
  display: flex;
- width: 206px;
+
  justify-content: center;
  gap: 10px;
- margin-top: 20px;
+ 
 }
 
 .join-in {
@@ -98,9 +95,9 @@ padding-bottom: 60px;
  text-transform: uppercase;
  color: var(--background-color);
  margin-top: 0px;
+ margin-bottom: 20px;
  @media screen and (min-width: 1200px) {
-  margin-top: 12px;
-  text-align: start;
+    text-align: start;
 }
 }
 
@@ -138,29 +135,27 @@ padding-bottom: 60px;
  }
 }
 
-.join-in {
- max-width: 207px;
- margin-bottom: 20px;
- margin: 0 auto;
-}
-
 .subscription-form {
  display: flex;
  flex-direction: column;
  align-items: center;
  text-align: center;
 
-  @media screen and (min-width: 768px) and (man-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
     display: flex;
     width: 450px;
-    flex-direction: row;
+    flex-direction: column;
   }
   @media screen and (min-width: 1200px) {
        flex-direction: row;
 }
 .subscription-label {
+  max-width: 450px;
+  width: 100%;
+
    @media screen and (min-width: 768px) {
-    max-width: 450px;}
+    max-width: 450px;
+  flex-direction: column;}
         }
  }
 .subscription-input {
@@ -173,8 +168,7 @@ padding-bottom: 60px;
  color: var(--background-color);
  background-color: var(--footer-color);
  padding-left: 15px;
- margin-top: 20px;
- @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
   max-width: 450px;
   @media screen and (min-width: 1200px) {
     width: 354px ;
@@ -202,6 +196,9 @@ padding-bottom: 60px;
  border-color: transparent;
  transition: background-color var(--anim-icon);
  margin-top: 20px;
+ @media screen and (min-width: 1200px) {
+  margin: 0  ;
+}
 }
 
 .subscription-btn:hover,
