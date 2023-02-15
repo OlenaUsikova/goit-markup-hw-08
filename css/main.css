@@ -386,6 +386,7 @@ button {
   font-size: 26px;
   line-height: 1.2;
   color: var(--accent-color);
+  display: inline-block;
 }
 
 .logo__header {
@@ -394,7 +395,6 @@ button {
 
 .logo__footer {
   color: var(--background-color);
-  margin-bottom: 20px;
 }
 
 /*  buttons */
@@ -796,7 +796,7 @@ button {
 }
 
 .advantages__list {
-  max-width: 450px;
+  width: 100%;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -903,7 +903,7 @@ button {
 }
 
 .team__list {
-  max-width: 450px;
+  width: 100%;
   background-color: var(--background-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1013,9 +1013,10 @@ button {
 }
 
 .footer {
-  margin: 0 auto;
   font-style: normal;
   background-color: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-div {
@@ -1026,23 +1027,25 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .footer-div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    row-gap: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1050,8 +1053,6 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 62px;
-    padding-bottom: 66px;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1065,19 +1066,10 @@ button {
 }
 
 .footer-left {
-  display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 232px;
-  margin: 0 auto;
   text-align: center;
-  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-left {
-    margin-right: 165px;
-    text-align: start;
     padding-bottom: 0px;
   }
 }
@@ -1085,13 +1077,28 @@ button {
   .footer-left {
     margin-right: 70px;
     padding-bottom: 0px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}
+
+.footer__logonav__logo {
+  display: block;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .footer__logonav__logo {
+    margin-bottom: 20px;
   }
 }
 
 .footer__address {
-  width: 231px;
-  margin-top: 20px;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    text-align: left;
+  }
 }
 
 .footer__link {
@@ -1117,7 +1124,6 @@ button {
   display: flex;
   width: 206px;
   text-align: center;
-  margin: 60px auto;
 }
 
 .footer__social {
@@ -1190,7 +1196,7 @@ button {
 }
 
 .join-in {
-  width: 207px;
+  max-width: 207px;
   margin-bottom: 20px;
   margin: 0 auto;
 }
@@ -1207,11 +1213,34 @@ button {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .subscription-form {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .subscription-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscription-label {
-  width: 100%;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .subscription-label {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscription-input {
@@ -1225,6 +1254,16 @@ button {
   background-color: var(--footer-color);
   padding-left: 15px;
   margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .subscription-input {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .subscription-input {
+    width: 354px;
+  }
 }
 
 .subscription-btn {
@@ -1252,7 +1291,6 @@ button {
   -webkit-transition: background-color var(--anim-icon);
   transition: background-color var(--anim-icon);
   margin-top: 20px;
-  margin-bottom: 60px;
 }
 
 .subscription-btn:hover,

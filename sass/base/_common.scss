@@ -61,6 +61,8 @@ button {
     font-size: 26px;
     line-height: 1.2;
     color: var(--accent-color);
+    // margin-bottom: 20px;
+    display: inline-block;
 }
 
 .logo__header {
@@ -71,7 +73,7 @@ button {
 .logo__footer {
 
     color: var(--background-color);
-    margin-bottom: 20px;
+    
 }
 
 /*  buttons */
