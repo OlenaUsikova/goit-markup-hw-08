@@ -481,6 +481,12 @@ button {
           align-items: center;
 }
 
+.header__wrapper {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -535,7 +541,6 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  margin-left: 93px;
 }
 
 .nav__links {
@@ -590,16 +595,20 @@ button {
 @media screen and (min-width: 768px) {
   .nav__adress {
     display: block;
-    margin-left: auto;
-    margin-top: 21px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .nav__adress {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px), (max-width: 1199px) {
+  .nav__notitia:first-child {
+    margin-bottom: 10px;
   }
 }
 
@@ -619,9 +628,10 @@ button {
 .nav__contact:hover, .nav__contact:focus {
   color: var(--accent-color);
 }
-@media screen and (min-width: 768px), (max-width: 1199px) {
-  .nav__contact {
-    padding: 10px;
+
+@media screen and (min-width: 1200px) {
+  .nav__contact:first-child {
+    padding-right: 10px;
   }
 }
 
@@ -790,15 +800,25 @@ button {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
-@media screen and (min-width: 768px) {
+.advatages__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
   .advatages__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -814,6 +834,7 @@ button {
 @media screen and (min-width: 1200px) {
   .advantages__list {
     max-width: 270px;
+    margin-bottom: 0;
   }
 }
 
@@ -844,13 +865,17 @@ button {
 }
 
 .advatages__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
   line-height: 1.7;
+  text-align: start;
 }
 
 .works {
   display: none;
-  padding-bottom: 30px;
+  padding-bottom: 94px;
 }
 @media screen and (min-width: 1200px) {
   .works {
@@ -892,8 +917,8 @@ button {
 
 .team {
   background: var(--accent-background-color);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .team__box {
@@ -951,6 +976,12 @@ button {
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__list {
@@ -1462,8 +1493,8 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
-  min-height: 689px;
+  max-width: 450px;
+  width: 100%;
   background-color: var(--background-color);
   padding: 40px;
   -webkit-transition-property: -webkit-transform;
@@ -1635,8 +1666,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 30px;
-  margin-left: 14px;
+  margin-bottom: 30px;
 }
 
 .modal-checkbox {
@@ -1707,8 +1741,7 @@ button {
   letter-spacing: 0.06em;
   color: var(--background-color);
   padding: 10px 52px;
-  margin-top: 40px;
-  margin-left: 124px;
+  margin: 0 auto;
 }
 
 .modal-menu {
@@ -1854,4 +1887,9 @@ button {
 }
 .modal-soclink:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .modal-soclink {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

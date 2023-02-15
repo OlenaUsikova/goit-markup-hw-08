@@ -23,7 +23,7 @@
     transform: translate(-50%, -50%);
     max-width: 450px;
     width: 100%;
-    min-height: 689px;
+    // min-height: 689px;
     background-color: var(--background-color);
     padding: 40px;
     transition-property: transform;
@@ -46,7 +46,7 @@
     background-color: var(--background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 4px;
-}
+    }
 
 .close-icon {
     display: block;
@@ -157,8 +157,10 @@
 .modal-label-checkbox {
     display: flex;
     align-items: center;
+    justify-content: center;
      margin-top: 30px;
-    margin-left: 14px;
+     margin-bottom: 30px;
+    // margin-left: 14px;
 }
 
 .modal-checkbox {
@@ -214,7 +216,7 @@
     letter-spacing: 0.06em;
     color: var(--background-color);
     padding: 10px 52px;
-    margin-top: 40px;
-    margin-left: 124px;
+    margin: 0 auto;
+    
 }
 
