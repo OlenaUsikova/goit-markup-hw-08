@@ -2,7 +2,7 @@
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 480px;
+    max-width: 16000px;
     margin: 0 auto;
     background-color: var(--footer-color);
     // background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -13,11 +13,11 @@
     
     // Mobile screen
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero/Header-img_mob@1x.jpg);
+        url(../images/hero/header-img_mob@1x.jpg);
       // retina mobile screen
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-          url(../images/hero/Header-img_mob@2x.jpg);
+          url(../images/hero/header-img_mob@2x.jpg);
       }
     
       // Tablet screen
@@ -27,18 +27,18 @@
         // retina tablet screen
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
           background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero/Header-img_tab@2x.jpg);
+            url(../images/hero/header-img_tab@2x.jpg);
         }
       }
     
       // Desktop screen
       @media screen and (min-width: 769px) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-          url(../images/hero/img_tab@1x.jpg);
+          url(../images/hero/img_desk@1x.jpg);
         // retina desktop screen
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
           background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero/Header-Img_desk@2x.jpg);
+            url(../images/hero/header-img_desk@2x.jpg);
         }
       }
 }

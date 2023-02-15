@@ -476,9 +476,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -496,14 +493,41 @@ button {
           align-items: center;
   display: none;
 }
-@media screen and (min-width: 767.98px) {
+@media screen and (min-width: 768px) {
   .nav {
-    displey: block;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .nav__logo {
-  padding: 24px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .nav__header {
@@ -516,7 +540,7 @@ button {
 
 .nav__links {
   font-weight: 500;
-  line-height: 1, 2;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   padding-top: 32px;
@@ -537,7 +561,7 @@ button {
 
 .nav-modal__links {
   font-weight: 500;
-  line-height: 1, 2;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   padding-top: 32px;
@@ -563,21 +587,25 @@ button {
 .nav__adress {
   display: none;
 }
-@media screen and (min-width: 767.98px) {
+@media screen and (min-width: 768px) {
   .nav__adress {
     display: block;
+    margin-left: auto;
+    margin-top: 21px;
   }
 }
-
-.nav__notitia:not(:first-child) {
-  padding-left: 50px;
+@media screen and (min-width: 1200px) {
+  .nav__adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .nav__contact {
   font-weight: 500;
-  line-height: 1, 2;
+  line-height: 1.2;
   color: var(--text-color);
-  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,14 +614,13 @@ button {
           align-items: center;
   -webkit-transition: color var(--anim-icon);
   transition: color var(--anim-icon);
-  display: none;
 }
 .nav__contact:hover, .nav__contact:focus {
   color: var(--accent-color);
 }
-@media screen and (min-width: 767.98px) {
+@media screen and (min-width: 768px), (max-width: 1199px) {
   .nav__contact {
-    display: block;
+    padding: 10px;
   }
 }
 
@@ -662,19 +689,19 @@ button {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 480px;
+  max-width: 16000px;
   margin: 0 auto;
   background-color: var(--footer-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_mob@1x.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_mob@1x.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/header-img_mob@1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header-img_mob@1x.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_mob@2x.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_mob@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/header-img_mob@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header-img_mob@2x.jpg);
   }
 }
 @media screen and (min-width: 481px) {
@@ -685,20 +712,20 @@ button {
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img_tab@2x.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img_tab@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/header-img_tab@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header-img_tab@2x.jpg);
   }
 }
 @media screen and (min-width: 769px) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/img_tab@1x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/img_tab@1x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/img_desk@1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/img_desk@1x.jpg);
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-Img_desk@2x.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-Img_desk@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/header-img_desk@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header-img_desk@2x.jpg);
   }
 }
 
@@ -757,14 +784,30 @@ button {
   padding-bottom: 60px;
 }
 
-.advatages__box {
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 768px) {
+  .advatages__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .advantages__list {
   max-width: 450px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__list {
+    max-width: 270px;
+  }
 }
 
 .advantages__icon {
@@ -780,6 +823,17 @@ button {
   text-transform: uppercase;
   color: var(--title-text-color);
   margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advatages__title {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advatages__title {
+    text-align: start;
+  }
 }
 
 .advatages__text {
@@ -846,7 +900,6 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 30px;
-  margin-bottom: 60px;
 }
 
 .team__list {
@@ -855,6 +908,16 @@ button {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    max-width: 270px;
+  }
 }
 
 .team__persons {
@@ -901,6 +964,18 @@ button {
       flex-basis: calc((100% - 30px) / 2);
   height: 92px;
 }
+@media screen and (min-width: 768px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
+  }
+}
 
 .client__link {
   display: -webkit-box;
@@ -941,8 +1016,52 @@ button {
   margin: 0 auto;
   font-style: normal;
   background-color: var(--footer-color);
-  padding-top: 62px;
-  padding-bottom: 66px;
+}
+
+.footer-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 62px;
+    padding-bottom: 66px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .footer-left {
@@ -953,6 +1072,20 @@ button {
   max-width: 232px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-left {
+    margin-right: 165px;
+    text-align: start;
+    padding-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-left {
+    margin-right: 70px;
+    padding-bottom: 0px;
+  }
 }
 
 .footer__address {
@@ -1012,6 +1145,12 @@ button {
   color: var(--background-color);
   margin-top: 0px;
 }
+@media screen and (min-width: 1200px) {
+  .join-in {
+    margin-top: 12px;
+    text-align: start;
+  }
+}
 
 .icon-link-footer {
   width: 44px;
@@ -1048,8 +1187,6 @@ button {
 /* форма відправки */
 .subscription {
   display: block;
-  max-width: 100%;
-  height: 86px;
 }
 
 .join-in {
@@ -1070,6 +1207,11 @@ button {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  max-width: 450px;
+}
+
+.subscription-label {
+  width: 100%;
 }
 
 .subscription-input {
@@ -1527,8 +1669,15 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--background-color);
-  padding: 40px;
+  padding: 48px 40px;
   color: #fff;
   -webkit-transition: -webkit-transform 250ms linear;
   transition: -webkit-transform 250ms linear;
@@ -1557,6 +1706,11 @@ button {
   border: none;
   border-radius: 50%;
   outline: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
 }
 
 .modal-menu__btn:hover .close-icon,
@@ -1571,9 +1725,8 @@ button {
 .modal-menu__link {
   font-weight: 500;
   font-size: 40px;
-  line-height: 47px;
   letter-spacing: 0.02em;
-  line-height: 1, 17;
+  line-height: 1.17;
   color: var(--title-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
@@ -1582,15 +1735,12 @@ button {
   text-decoration: none;
 }
 
-.modal-menu__link.current {
+.modal-menu__link.active {
   color: var(--accent-color);
 }
 
 .modal__adress {
-  margin: 20px;
-}
-.modal__adress:last-child {
-  border: none;
+  margin-bottom: 64px;
 }
 
 .adress__link {
@@ -1598,6 +1748,7 @@ button {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+  margin-bottom: 32px;
 }
 
 .adress__tel {

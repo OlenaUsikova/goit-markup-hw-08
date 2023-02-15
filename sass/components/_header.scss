@@ -4,7 +4,7 @@
  margin: 0 auto;
 &__wrapper {
  display: flex;
- justify-content: space-between;
+//  justify-content: space-between;
  align-items: center;
 }}
 
@@ -14,14 +14,26 @@
  justify-content: space-between;
  align-items: center;
  display: none;
- @media screen and (min-width: 767.98px) {
-   displey:block;
+ @media screen and (min-width: 768px) {
+   display:block;
+   @media screen and (min-width: 1200px) {
+      display: flex;
+ justify-content: space-between;
+ align-items: center; }
 }
 }
 
 .nav__logo {
- padding: 24px 0;
-}
+   padding-top: 16px;
+    padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      padding-top: 26px;
+      padding-bottom: 26px;}
+      @media screen and (min-width: 1200px) {
+         margin-right: 93px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+}}
 
 .nav__header {
  display: flex;
@@ -31,7 +43,7 @@
 
 .nav__links {
  font-weight: 500;
- line-height: 1,2;
+ line-height: 1.2;
  letter-spacing: 0.02em;
  color: var(--title-text-color);
  padding-top: 32px;
@@ -50,7 +62,7 @@
 }}
 .nav-modal__links {
    font-weight: 500;
- line-height: 1,2;
+ line-height: 1.2;
  letter-spacing: 0.02em;
  color: var(--title-text-color);
  padding-top: 32px;
@@ -74,18 +86,26 @@
 
 .nav__adress {
   display: none;
-  @media screen and (min-width: 767.98px) {
-   display: block; } }
+  @media screen and (min-width: 768px) {
+   display: block;
+   margin-left: auto;
+margin-top: 21px; }
+   @media screen and (min-width: 1200px) {
+      display: flex;
+    } }
 
 .nav__notitia:not(:first-child) {
- padding-left: 50px;
-}
+
+   @media screen and (min-width: 768px),    
+   (max-width: 1199px) {
+       }
+ ;}
 
 .nav__contact {
  font-weight: 500;
- line-height: 1, 2;
+ line-height: 1.2;
  color: var(--text-color);
- padding: 20px 0;
+//  padding: 10px 0;
  display: flex;
  align-items: center;
  transition: color var(--anim-icon);
@@ -93,9 +113,9 @@
  &:focus {
   color: var(--accent-color);
  }
- display: none;
- @media screen and (min-width: 767.98px) {
-  display: block };
+ @media screen and (min-width: 768px),    
+   (max-width: 1199px) {
+      padding: 10px; }
 }
 
 .nav__icon {
@@ -132,8 +152,7 @@ background-color: var(--background-color);
    display: none;
 
 @media screen and (min-width: 1200px) {
-   display: none;
- }
+   display: none; }
 }}
 
 .header-close {
@@ -150,5 +169,4 @@ background-color: var(--background-color);
 .header__btn-menu:focus>.header-close {
    fill: var(--accent-color);
    color: var(--accent-color);
-   transition: fill, border, var(--anim-icon);
-}
+   transition: fill, border, var(--anim-icon); }
