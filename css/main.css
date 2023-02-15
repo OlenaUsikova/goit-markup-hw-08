@@ -599,6 +599,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 0;
   }
 }
 
@@ -687,9 +688,9 @@ button {
 
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 16000px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 1600px;
   margin: 0 auto;
   background-color: var(--footer-color);
   background-repeat: no-repeat;
@@ -726,6 +727,12 @@ button {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/header-img_desk@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/header-img_desk@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -1803,10 +1810,12 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 357px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8p;
 }
 @media screen and (min-width: 768px) {
   .modal-menu__socials {
@@ -1814,9 +1823,6 @@ button {
   }
 }
 
-.modal-menu__socitems {
-  padding-right: 10px;
-}
 @media screen and (min-width: 768px) {
   .modal-menu__socitems {
     display: none;
@@ -1829,26 +1835,23 @@ button {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-@media screen and (min-width: 768px) {
-  .modal-soclink {
-    display: none;
-  }
+.modal-soclink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5714285714;
+  letter-spacing: 0.02em;
+  padding-right: 10px;
 }
-@media screen and (min-width: 320px), (max-width: 480px) {
-  .modal-soclink {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: var(--accent-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.2222222222;
-    letter-spacing: 0.02em;
-  }
+.modal-soclink:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }/*# sourceMappingURL=main.css.map */

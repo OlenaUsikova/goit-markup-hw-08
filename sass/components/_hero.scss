@@ -1,8 +1,9 @@
 .hero {
+ 
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 16000px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 1600px;
     margin: 0 auto;
     background-color: var(--footer-color);
     // background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -41,6 +42,11 @@
             url(../images/hero/header-img_desk@2x.jpg);
         }
       }
+      @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+    padding-bottom: 200px;
+    } 
+    
 }
 
 .hero__title {
