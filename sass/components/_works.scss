@@ -1,11 +1,15 @@
 .works {
     display: none;
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;;
+    }
     padding-bottom: 30px;
 }
 
 .works__box {
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
     margin-top: 50px;
     gap: 30px;
 }
